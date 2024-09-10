@@ -11,46 +11,39 @@ teams:
       - thelinuxfoundation
   - name: besu-admin
     maintainers:
-      - ryjones
-    members:
       - fab-10
       - garyschulte
       - macfarla
       - matkt
-      - shemnon
+    members:
       - jflo
       - jframe
       - siladu
   - name: besu-contributors
     maintainers:
-      - ryjones
-    members:
       - garyschulte
       - jframe
       - macfarla
-      - shemnon
+    members:
       - ConsensysOps
       - non-fungible-nelson
       - cdivitotawela
       - kkaur01
   - name: besu-docs-maintainers
     maintainers:
-      - ryjones
-    members:
       - bgravenorst
       - joshuafernandes
+    members:
       - alexandratran
       - joaniefromtheblock
       - m4sterbunny
   - name: besu-maintainers
     maintainers:
-      - ryjones
-    members:
       - fab-10
       - garyschulte
       - jframe
       - macfarla
-      - shemnon
+    members:
       - Gabriel-Trintinalia
       - ahamlat
       - ajsutton
@@ -71,11 +64,9 @@ teams:
       - usmansaleem
   - name: besu-triage
     maintainers:
-      - ryjones
-    members:
       - macfarla
       - non-fungible-nelson
-      - shemnon
+    members:
       - NickSneo
       - cdivitotawela
       - cloudspores
