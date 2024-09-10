@@ -1,16 +1,93 @@
 teams:
-- name: lf-staff
-  maintainers:
-  - ryjones
-  members:
-  - SeanBohan
-  - daniela-barbosa
-  - davidwboswell
-  - hartm
-  - minyu66
-  - thelinuxfoundation
+  - name: lf-staff
+    maintainers:
+      - ryjones
+    members:
+      - SeanBohan
+      - daniela-barbosa
+      - davidwboswell
+      - hartm
+      - minyu66
+      - thelinuxfoundation
+  - name: besu-admin
+    maintainers:
+      - ryjones
+    members:
+      - fab-10
+      - garyschulte
+      - macfarla
+      - matkt
+      - shemnon
+      - jflo
+      - jframe
+      - siladu
+  - name: besu-contributors
+    maintainers:
+      - ryjones
+    members:
+      - garyschulte
+      - jframe
+      - macfarla
+      - shemnon
+      - ConsensysOps
+      - non-fungible-nelson
+      - cdivitotawela
+      - kkaur01
+  - name: besu-docs-maintainers
+    maintainers:
+      - ryjones
+    members:
+      - bgravenorst
+      - joshuafernandes
+      - alexandratran
+      - joaniefromtheblock
+      - m4sterbunny
+  - name: besu-maintainers
+    maintainers:
+      - ryjones
+    members:
+      - fab-10
+      - garyschulte
+      - jframe
+      - macfarla
+      - shemnon
+      - Gabriel-Trintinalia
+      - ahamlat
+      - ajsutton
+      - antonydenyer
+      - atoulme
+      - daniellehrner
+      - diega
+      - gezero
+      - gfukushima
+      - jflo
+      - joshuafernandes
+      - lucassaldanha
+      - matkt
+      - matthew1001
+      - mbaxter
+      - pinges
+      - siladu
+      - usmansaleem
+  - name: besu-triage
+    maintainers:
+      - ryjones
+    members:
+      - macfarla
+      - non-fungible-nelson
+      - shemnon
+      - NickSneo
+      - cdivitotawela
+      - cloudspores
+      - ensi321
+      - gtebrean
+      - kkaur01
+      - lu-pinto
+      - m4sterbunny
+      - Matilda-Clerke
+      - matthew1001
 repositories:
-- name: governance
-  teams:
-    lf-staff: maintain
-  visibility: public
+  - name: governance
+    teams:
+      lf-staff: maintain
+    visibility: public
