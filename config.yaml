@@ -78,6 +78,14 @@ teams:
       - Matilda-Clerke
       - matthew1001
 repositories:
+  - name: besu-errorprone-checks
+    teams:
+      besu-admin: admin
+      besu-contributors: write
+      besu-docs-maintainers: read
+      besu-maintainers: maintain
+      besu-triage: read
+    visibility: public
   - name: governance
     teams:
       lf-staff: maintain
