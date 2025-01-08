@@ -24,11 +24,6 @@ teams:
       - garyschulte
       - jframe
       - macfarla
-    members:
-      - ConsensysOps
-      - non-fungible-nelson
-      - cdivitotawela
-      - kkaur01
   - name: besu-docs-maintainers
     maintainers:
       - bgravenorst
@@ -46,16 +41,15 @@ teams:
     members:
       - Gabriel-Trintinalia
       - ahamlat
-      - ajsutton
-      - antonydenyer
-      - atoulme
+      - cdivitotawela
       - daniellehrner
       - diega
-      - gezero
       - gfukushima
       - jflo
       - joshuafernandes
+      - lu-pinto
       - lucassaldanha
+      - Matilda-Clerke
       - matkt
       - matthew1001
       - mbaxter
@@ -65,18 +59,16 @@ teams:
   - name: besu-triage
     maintainers:
       - macfarla
-      - non-fungible-nelson
+      - jflo
+      - jframe
     members:
+      - ajsutton
+      - antonydenyer
+      - atoulme
       - NickSneo
-      - cdivitotawela
-      - cloudspores
-      - ensi321
       - gtebrean
       - kkaur01
-      - lu-pinto
-      - m4sterbunny
-      - Matilda-Clerke
-      - matthew1001
+      - shemnon
 repositories:
   - name: besu-errorprone-checks
     teams:
