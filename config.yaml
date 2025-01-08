@@ -68,7 +68,6 @@ teams:
       - NickSneo
       - gtebrean
       - kkaur01
-      - shemnon
 repositories:
   - name: besu-errorprone-checks
     teams:
