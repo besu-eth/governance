@@ -80,4 +80,6 @@ repositories:
   - name: governance
     teams:
       lf-staff: maintain
+      besu-admin: maintain
+      besu-maintainers: write
     visibility: public
