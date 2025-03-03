@@ -4,11 +4,9 @@ teams:
       - ryjones
     members:
       - SeanBohan
-      - daniela-barbosa
       - davidwboswell
       - hartm
       - jwagantall
-      - minyu66
       - thelinuxfoundation
   - name: besu-admin
     maintainers:
