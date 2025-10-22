@@ -80,3 +80,9 @@ repositories:
       besu-admin: maintain
       besu-maintainers: write
     visibility: public
+  - name: wiki
+    teams:
+      lf-staff: maintain
+      besu-admin: maintain
+      besu-maintainers: write
+    visibility: public
