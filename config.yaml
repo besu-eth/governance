@@ -66,6 +66,12 @@ teams:
       - gtebrean
       - kkaur01
 repositories:
+  - name: .github
+    teams:
+      lf-staff: maintain
+      besu-admin: maintain
+      besu-maintainers: write
+    visibility: public
   - name: besu-errorprone-checks
     teams:
       besu-admin: admin
