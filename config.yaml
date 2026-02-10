@@ -38,19 +38,16 @@ teams:
     members:
       - Gabriel-Trintinalia
       - ahamlat
-      - cdivitotawela
       - daniellehrner
       - diega
       - gfukushima
       - jflo
-      - joshuafernandes
       - lu-pinto
       - lucassaldanha
       - Matilda-Clerke
       - matkt
       - matthew1001
       - pinges
-      - pullurib
       - siladu
       - usmansaleem
   - name: besu-triage
@@ -61,7 +58,6 @@ teams:
     members:
       - ajsutton
       - antonydenyer
-      - atoulme
       - NickSneo
       - gtebrean
       - kkaur01
