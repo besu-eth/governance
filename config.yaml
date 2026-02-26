@@ -61,6 +61,7 @@ teams:
       - NickSneo
       - gtebrean
       - kkaur01
+      - mirgee
 repositories:
   - name: .github
     teams:
