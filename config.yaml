@@ -93,6 +93,14 @@ repositories:
       besu-maintainers: maintain
       besu-triage: read
     visibility: public
+  - name: besu-stateless
+    teams:
+      besu-admin: admin
+      besu-contributors: write
+      besu-docs-maintainers: read
+      besu-maintainers: maintain
+      besu-triage: read
+    visibility: public
   - name: governance
     teams:
       lf-staff: maintain
