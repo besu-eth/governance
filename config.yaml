@@ -69,14 +69,14 @@ repositories:
       besu-admin: maintain
       besu-maintainers: write
     visibility: public
-  - name: besu-docs
-    teams:
-      besu-admin: admin
-      besu-contributors: write
-      besu-docs-maintainers: maintain
-      besu-maintainers: maintain
-      besu-triage: read
-    visibility: public
+#  - name: besu-docs
+#    teams:
+#      besu-admin: admin
+#      besu-contributors: write
+#      besu-docs-maintainers: maintain
+#      besu-maintainers: maintain
+#      besu-triage: read
+#    visibility: public
   - name: besu-native
     teams:
       besu-admin: admin
