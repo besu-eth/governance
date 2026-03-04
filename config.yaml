@@ -91,6 +91,14 @@ repositories:
       besu-admin: maintain
       besu-maintainers: write
     visibility: public
+  - name: homebrew-besu
+    teams:
+      besu-admin: admin
+      besu-contributors: write
+      besu-docs-maintainers: read
+      besu-maintainers: maintain
+      besu-triage: read
+    visibility: public
   - name: wiki
     teams:
       lf-staff: maintain
