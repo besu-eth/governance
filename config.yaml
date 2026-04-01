@@ -51,6 +51,7 @@ teams:
       - pinges
       - siladu
       - usmansaleem
+      - mirgee
   - name: besu-triage
     maintainers:
       - macfarla
@@ -62,7 +63,6 @@ teams:
       - NickSneo
       - gtebrean
       - kkaur01
-      - mirgee
 repositories:
   - name: .github
     teams:
