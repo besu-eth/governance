@@ -1,4 +1,56 @@
+# besu-eth CLOWarden configuration
+# Changes via PR to this repo; CLOWarden validates and reconciles.
+
 teams:
+
+  - name: contributors
+    maintainers:
+      - jframe
+      - jflo
+      - macfarla
+      - kkaur01
+    members:
+      - <contributor1>
+      - <contributor2>
+
+  - name: maintainers
+    maintainers:
+      - jframe
+      - jflo
+      - macfarla
+      - kkaur01
+    members:
+      - ahamlat
+      - daniellehrner
+      - diega
+      - fab-10
+      - gabriel-trintinalia
+      - garyschulte
+      - gfukushima
+      - lu-pinto
+      - lucassaldanha
+      - Matilda-Clerke
+      - matkt
+      - matthew1001
+      - mirgee
+      - pinges
+      - siladu
+      - usmansaleem
+    formation:
+      - contributors         # maintainers inherits all contributors
+
+  - name: org-admins
+    maintainers:
+      - jframe
+      - jflo
+      - macfarla
+      - kkaur01
+    members:
+      - fab-10
+      - garyschulte
+      - matkt
+      - siladu
+
   - name: lf-staff
     maintainers:
       - ryjones
@@ -8,133 +60,94 @@ teams:
       - hartm
       - jwagantall
       - thelinuxfoundation
-  - name: besu-admin
+
+  - name: security
     maintainers:
-      - fab-10
-      - garyschulte
-      - macfarla
-      - matkt
-    members:
+      - jframe
       - jflo
-      - jframe
-      - siladu
-  - name: besu-contributors
-    maintainers:
-      - garyschulte
-      - jframe
       - macfarla
-  - name: besu-docs-maintainers
+      - kkaur01
+    members:
+      - fab-10
+      - siladu
+      - garyschulte
+
+  - name: docs-maintainers
     maintainers:
-      - bgravenorst
-      - joshuafernandes
+      - jframe
+      - jflo
+      - macfarla
+      - kkaur01
     members:
       - alexandratran
+      - bgravenorst
+      - joshuafernandes
       - m4sterbunny
-  - name: besu-maintainers
-    maintainers:
-      - fab-10
-      - garyschulte
-      - jframe
-      - macfarla
-    members:
-      - Gabriel-Trintinalia
-      - ahamlat
-      - daniellehrner
-      - diega
-      - gfukushima
-      - jflo
-      - lu-pinto
-      - lucassaldanha
-      - Matilda-Clerke
-      - matkt
-      - matthew1001
-      - pinges
-      - siladu
-      - usmansaleem
-      - mirgee
-  - name: besu-triage
-    maintainers:
-      - macfarla
-      - jflo
-      - jframe
-    members:
-      - ajsutton
-      - antonydenyer
-      - NickSneo
-      - gtebrean
-      - kkaur01
+
 repositories:
-  - name: .github
-    teams:
-      lf-staff: maintain
-      besu-admin: maintain
-      besu-maintainers: write
-    visibility: public
+
+  # Core client — highest-value repo
   - name: besu
     teams:
-      besu-admin: admin
-      besu-contributors: write
-      besu-docs-maintainers: triage
-      besu-maintainers: maintain
-      besu-triage: triage
-    visibility: public
-  - name: besu-docs
-    teams:
-      besu-admin: admin
-      besu-contributors: write
-      besu-docs-maintainers: maintain
-      besu-maintainers: maintain
-      besu-triage: read
-    visibility: public
+      org-admins: admin
+      maintainers: maintain
+      contributors: triage
+
+  # Native libraries (compiled crypto/perf deps)
   - name: besu-native
     teams:
-      besu-admin: admin
-      besu-contributors: write
-      besu-docs-maintainers: read
-      besu-maintainers: maintain
-      besu-triage: read
-    visibility: public
+      org-admins: admin
+      maintainers: maintain
+      contributors: triage
+
+  # Static analysis / build tooling
   - name: besu-errorprone-checks
     teams:
-      besu-admin: admin
-      besu-contributors: write
-      besu-docs-maintainers: read
-      besu-maintainers: maintain
-      besu-triage: read
-    visibility: public
-  - name: besu-stateless
+      org-admins: admin
+      maintainers: maintain
+      contributors: triage
+
+  # Documentation site
+  - name: besu-docs
     teams:
-      besu-admin: admin
-      besu-contributors: write
-      besu-docs-maintainers: read
-      besu-maintainers: maintain
-      besu-triage: read
-    visibility: public
-  - name: besu-hsm-plugin
-    teams:
-      besu-admin: admin
-      besu-contributors: write
-      besu-docs-maintainers: read
-      besu-maintainers: maintain
-      besu-triage: read
-    visibility: public
+      org-admins: admin
+      maintainers: maintain
+      docs-maintainers: maintain
+      contributors: triage
+
+  # Org governance (CLOWarden config lives here)
   - name: governance
     teams:
+      org-admins: admin
+      maintainers: maintain
       lf-staff: maintain
-      besu-admin: maintain
-      besu-maintainers: write
-    visibility: public
-  - name: homebrew-besu
+      # contributors intentionally excluded — governance changes are maintainer-only
+
+  # Org-wide GitHub defaults (.github/FUNDING.yml, issue templates, etc.)
+  - name: .github
     teams:
-      besu-admin: admin
-      besu-contributors: write
-      besu-docs-maintainers: read
-      besu-maintainers: maintain
-      besu-triage: read
-    visibility: public
+      org-admins: admin
+      maintainers: maintain
+      lf-staff: maintain
+
+  # Wiki / knowledge base
   - name: wiki
     teams:
+      org-admins: admin
+      maintainers: maintain
       lf-staff: maintain
-      besu-admin: maintain
-      besu-maintainers: write
-    visibility: public
+      docs-maintainers: write
+      contributors: write
+
+  # Homebrew tap for Besu
+  - name: homebrew-besu
+    teams:
+      org-admins: admin
+      maintainers: maintain
+
+  # Security vulnerability tracking — restricted
+  - name: vectors
+    teams:
+      org-admins: admin
+      security: write
+      # maintainers and contributors intentionally excluded
