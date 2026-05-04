@@ -29,7 +29,6 @@ teams:
       - joshuafernandes
     members:
       - alexandratran
-      - m4sterbunny
   - name: besu-maintainers
     maintainers:
       - fab-10
@@ -82,7 +81,7 @@ repositories:
     teams:
       besu-admin: admin
       besu-contributors: write
-      besu-docs-maintainers: maintain
+      besu-docs-maintainers: admin
       besu-maintainers: maintain
       besu-triage: read
     visibility: public
