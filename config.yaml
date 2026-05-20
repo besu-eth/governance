@@ -3,16 +3,6 @@
 
 teams:
 
-  - name: contributors
-    maintainers:
-      - jframe
-      - jflo
-      - macfarla
-      - kkaur01
-    members:
-      - <contributor1>
-      - <contributor2>
-
   - name: maintainers
     maintainers:
       - jframe
@@ -36,8 +26,6 @@ teams:
       - pinges
       - siladu
       - usmansaleem
-    formation:
-      - contributors         # maintainers inherits all contributors
 
   - name: org-admins
     maintainers:
@@ -71,6 +59,19 @@ teams:
       - fab-10
       - siladu
       - garyschulte
+      
+  - name: security-managers
+    maintainers:
+      - jframe
+      - jflo
+      - macfarla
+      - kkaur01
+    members:
+      - SeanBohan
+      - davidwboswell
+      - hartm
+      - jwagantall
+      - thelinuxfoundation
 
   - name: docs-maintainers
     maintainers:
@@ -86,51 +87,69 @@ teams:
 
 repositories:
 
-  # Core client — highest-value repo
   - name: besu
     teams:
       org-admins: admin
       maintainers: maintain
       contributors: triage
+      security: write
+      security-managers: read
 
-  # Native libraries (compiled crypto/perf deps)
   - name: besu-native
     teams:
       org-admins: admin
       maintainers: maintain
       contributors: triage
+      security: write
+      security-managers: read
+  
+  - name: besu-hsm-plugin
+    teams:
+      org-admins: admin
+      maintainers: maintain
+      contributors: triage
+      security: write
+      security-managers: read
+      
+  - name: besu-stateless
+    teams:
+      org-admins: admin
+      maintainers: maintain
+      contributors: triage
+      security: write
+      security-managers: read
 
-  # Static analysis / build tooling
   - name: besu-errorprone-checks
     teams:
       org-admins: admin
       maintainers: maintain
       contributors: triage
+      security: write
+      security-managers: read
 
-  # Documentation site
   - name: besu-docs
     teams:
       org-admins: admin
       maintainers: maintain
       docs-maintainers: maintain
       contributors: triage
+      security: write
+      security-managers: read
 
-  # Org governance (CLOWarden config lives here)
   - name: governance
     teams:
       org-admins: admin
       maintainers: maintain
       lf-staff: maintain
-      # contributors intentionally excluded — governance changes are maintainer-only
 
-  # Org-wide GitHub defaults (.github/FUNDING.yml, issue templates, etc.)
   - name: .github
     teams:
       org-admins: admin
       maintainers: maintain
       lf-staff: maintain
+      security: write
+      security-managers: read
 
-  # Wiki / knowledge base
   - name: wiki
     teams:
       org-admins: admin
@@ -138,16 +157,17 @@ repositories:
       lf-staff: maintain
       docs-maintainers: write
       contributors: write
+      security: write
+      security-managers: read
 
-  # Homebrew tap for Besu
   - name: homebrew-besu
     teams:
       org-admins: admin
       maintainers: maintain
+      security: write
+      security-managers: read
 
-  # Security vulnerability tracking — restricted
   - name: vectors
     teams:
       org-admins: admin
       security: write
-      # maintainers and contributors intentionally excluded
