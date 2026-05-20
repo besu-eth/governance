@@ -91,7 +91,6 @@ repositories:
     teams:
       org-admins: admin
       maintainers: maintain
-      contributors: triage
       security: write
       security-managers: read
 
@@ -99,7 +98,6 @@ repositories:
     teams:
       org-admins: admin
       maintainers: maintain
-      contributors: triage
       security: write
       security-managers: read
   
@@ -107,7 +105,6 @@ repositories:
     teams:
       org-admins: admin
       maintainers: maintain
-      contributors: triage
       security: write
       security-managers: read
       
@@ -115,7 +112,6 @@ repositories:
     teams:
       org-admins: admin
       maintainers: maintain
-      contributors: triage
       security: write
       security-managers: read
 
@@ -123,7 +119,6 @@ repositories:
     teams:
       org-admins: admin
       maintainers: maintain
-      contributors: triage
       security: write
       security-managers: read
 
@@ -132,7 +127,6 @@ repositories:
       org-admins: admin
       maintainers: maintain
       docs-maintainers: maintain
-      contributors: triage
       security: write
       security-managers: read
 
@@ -156,7 +150,6 @@ repositories:
       maintainers: maintain
       lf-staff: maintain
       docs-maintainers: write
-      contributors: write
       security: write
       security-managers: read
 
