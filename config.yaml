@@ -67,11 +67,8 @@ teams:
       - macfarla
       - kkaur01
     members:
-      - SeanBohan
-      - davidwboswell
+      - ryjones
       - hartm
-      - jwagantall
-      - thelinuxfoundation
 
   - name: docs-maintainers
     maintainers:
