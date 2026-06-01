@@ -185,6 +185,7 @@ repositories:
 
   # Security vulnerability tracking — restricted
   - name: vectors
+    visibility: private
     teams:
       org-admins: admin
       security: write
