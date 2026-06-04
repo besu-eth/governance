@@ -3,16 +3,6 @@
 
 teams:
 
-  - name: contributors
-    maintainers:
-      - jframe
-      - jflo
-      - macfarla
-      - kkaur01
-    members:
-      - <contributor1>
-      - <contributor2>
-
   - name: maintainers
     maintainers:
       - jframe
@@ -36,8 +26,6 @@ teams:
       - pinges
       - siladu
       - usmansaleem
-    formation:
-      - contributors         # maintainers inherits all contributors
 
   - name: org-admins
     maintainers:
@@ -143,14 +131,6 @@ repositories:
     teams:
       org-admins: admin
       maintainers: maintain
-      contributors: triage
-
-  # Documentation site
-  - name: besu-docs
-    teams:
-      org-admins: admin
-      maintainers: maintain
-      docs-maintainers: maintain
       contributors: triage
 
   # Org governance (CLOWarden config lives here)
