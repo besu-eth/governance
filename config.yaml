@@ -113,14 +113,14 @@ repositories:
   # Core client — highest-value repo
   - name: besu
     teams:
-      repo-admin: admin
+      repo-admins: admin
       docs-maintainers: triage
       besu-maintainers: maintain
       besu-triage: triage
     visibility: public
   - name: besu-docs
     teams:
-      repo-admin: admin
+      repo-admins: admin
       docs-maintainers: admin
       besu-maintainers: maintain
       besu-triage: read
