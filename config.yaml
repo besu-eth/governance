@@ -27,7 +27,7 @@ teams:
       - siladu
       - usmansaleem
 
-  - name: org-admins
+  - name: repo-admins
     maintainers:
       - jframe
       - jflo
@@ -107,32 +107,32 @@ repositories:
   - name: besu
     teams:
       besu-admin: admin
-      besu-docs-maintainers: triage
+      docs-maintainers: triage
       besu-maintainers: maintain
       besu-triage: triage
     visibility: public
   - name: besu-docs
     teams:
       besu-admin: admin
-      besu-docs-maintainers: admin
+      docs-maintainers: admin
       besu-maintainers: maintain
       besu-triage: read
     visibility: public
   - name: besu-native
     teams:
-      org-admins: admin
+      repo-admins: admin
       maintainers: maintain
 
   # Static analysis / build tooling
   - name: besu-errorprone-checks
     teams:
-      org-admins: admin
+      repo-admins: admin
       maintainers: maintain
 
   # Org governance (CLOWarden config lives here)
   - name: governance
     teams:
-      org-admins: admin
+      repo-admins: admin
       maintainers: maintain
       lf-staff: maintain
       # contributors intentionally excluded — governance changes are maintainer-only
@@ -147,7 +147,7 @@ repositories:
   # Wiki / knowledge base
   - name: wiki
     teams:
-      org-admins: admin
+      repo-admins: admin
       maintainers: maintain
       lf-staff: maintain
       docs-maintainers: write
@@ -155,7 +155,7 @@ repositories:
   # Homebrew tap for Besu
   - name: homebrew-besu
     teams:
-      org-admins: admin
+      repo-admins: admin
       maintainers: maintain
 
   # Security vulnerability tracking — restricted
