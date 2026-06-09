@@ -75,6 +75,7 @@ teams:
       - kkaur01
     members:
       - alexandratran
+      - bgravenorst
   - name: besu-maintainers
     maintainers:
       - fab-10
