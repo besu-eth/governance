@@ -119,6 +119,13 @@ repositories:
       besu-maintainers: maintain
       besu-triage: triage
     visibility: public
+  # Security vulnerability fixing — restricted
+  - name: sec-besu
+    visibility: private
+    teams:
+      org-admins: admin
+      security: write
+      # maintainers and contributors intentionally excluded
   - name: besu-docs
     teams:
       repo-admins: admin
