@@ -31,6 +31,9 @@
  *   TRIAGE_STATUS           Name of the intake status   (default: Triage)
  *   DELEGATED_STATUS        Name of the delegated status (default: Delegated)
  *   DRY_RUN                 Set to "true" to log without making changes
+ *
+ * Note: status option names (TRIAGE_STATUS, DELEGATED_STATUS) are matched
+ * case-insensitively against the project's Status field options.
  */
 
 'use strict';
@@ -59,7 +62,6 @@ async function graphql(query, variables = {}) {
     headers: {
       Authorization: 'Bearer ' + GITHUB_TOKEN,
       'Content-Type': 'application/json',
-      'X-GitHub-Next-Global-ID': '1', // opt-in to new global node ID format
     },
     body: JSON.stringify({ query, variables }),
   });
