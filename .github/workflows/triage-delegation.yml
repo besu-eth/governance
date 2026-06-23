@@ -61,5 +61,5 @@ jobs:
           TRIAGE_PROJECT_NUMBER: '3'
           TRIAGE_STATUS: Triage
           DELEGATED_STATUS: Delegated
-          DRY_RUN: ${{ inputs.dry_run || 'false' }}
+          DRY_RUN: ${{ inputs.dry_run && 'true' || 'false' }}
         run: node scripts/triage-delegation.js
