@@ -59,7 +59,7 @@ async function graphql(query, variables = {}) {
     headers: {
       Authorization: 'Bearer ' + GITHUB_TOKEN,
       'Content-Type': 'application/json',
-      'X-Github-Next-Global-ID': '1', // opt-in to new global node ID format
+      'X-GitHub-Next-Global-ID': '1', // opt-in to new global node ID format
     },
     body: JSON.stringify({ query, variables }),
   });
@@ -156,7 +156,7 @@ async function getTriageItems(projectId, statusFieldId, triageOptionId) {
     const page = data.node.items;
 
     for (const item of page.nodes) {
-      // Only process real issues (not PRs or draft issues)
+      // Only process issues (not PRs or other content types)
       if (!item.content || item.content.__typename !== 'Issue') continue;
 
       const statusValue = item.fieldValues.nodes.find(
@@ -189,7 +189,7 @@ async function getTriageItemForIssue(projectId, issueNodeId, statusFieldId, tria
           title
           url
           repository { nameWithOwner }
-          projectItems(first: 20) {
+          projectItems(first: 50) {
             nodes {
               id
               project { id number title }
@@ -256,7 +256,7 @@ async function getIssueOtherProjects(issueNodeId, triageProjectId, cachedProject
       `query($issueId: ID!) {
         node(id: $issueId) {
           ... on Issue {
-            projectItems(first: 20) {
+            projectItems(first: 50) {
               nodes {
                 id
                 project { id number title }
