@@ -1,0 +1,65 @@
+# triage-delegation.yml
+#
+# Keeps the Besu Triage intake queue clean by detecting issues that have been
+# delegated to another project and updating their Status in the Triage project
+# so they no longer appear in the intake filter (status:Triage is:open).
+#
+# Two complementary triggers are used:
+#
+#   1. projects_v2_item (created / edited)
+#      Fires whenever any Projects v2 item is added or modified in the org.
+#      The script checks only the single issue from the event payload, making
+#      this path lightweight and near-real-time.
+#
+#   2. schedule (hourly)
+#      A full scan catches any delegations that may have been missed — for
+#      example if the event-driven path is skipped due to a rate limit or
+#      a manual project assignment from outside the org.
+#
+# Required secret:
+#   TRIAGE_AUTOMATION_TOKEN  — PAT (classic) with scopes: read:org, project
+#                              — or — fine-grained PAT with:
+#                                Organisation permissions → Projects: Read & write
+#
+# See docs/triage-automation.md for full setup instructions.
+
+name: Triage Delegation
+
+on:
+  # Near-real-time: fires when any project item is created or edited in the org
+  projects_v2_item:
+    types: [created, edited]
+
+  # Hourly catch-all to handle anything the event-driven path missed
+  schedule:
+    - cron: '0 * * * *'
+
+  # Allow maintainers to trigger a manual run (e.g. to test or backfill)
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Dry run — log actions without making changes'
+        type: boolean
+        default: false
+
+jobs:
+  delegate:
+    name: Update delegated triage items
+    runs-on: ubuntu-latest
+    # Minimal permissions — all project access comes from the PAT
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Run triage delegation script
+        env:
+          GITHUB_TOKEN: ${{ secrets.TRIAGE_AUTOMATION_TOKEN }}
+          ORG_LOGIN: besu-eth
+          TRIAGE_PROJECT_NUMBER: '3'
+          TRIAGE_STATUS: Triage
+          DELEGATED_STATUS: Delegated
+          DRY_RUN: ${{ inputs.dry_run || 'false' }}
+        run: node scripts/triage-delegation.js
