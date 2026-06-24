@@ -269,8 +269,10 @@ async function getIssueOtherProjects(issueNodeId, triageProjectId, cachedProject
       }`,
       { issueId: issueNodeId },
     );
+
+    if (!data.node) return [];
+
     projectItems = data.node.projectItems.nodes;
-  }
 
   return projectItems.filter(pi => pi.project.id !== triageProjectId);
 }
