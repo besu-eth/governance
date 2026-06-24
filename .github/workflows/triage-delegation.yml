@@ -42,6 +42,10 @@ on:
         type: boolean
         default: false
 
+concurrency:
+  group: triage-delegation
+  cancel-in-progress: true
+
 jobs:
   delegate:
     name: Update delegated triage items
