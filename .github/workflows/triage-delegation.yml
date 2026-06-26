@@ -4,17 +4,15 @@
 # delegated to another project and updating their Status in the Triage project
 # so they no longer appear in the intake filter (status:Triage is:open).
 #
-# Two complementary triggers are used:
+# Triggers:
 #
-#   1. projects_v2_item (created / edited)
-#      Fires whenever any Projects v2 item is added or modified in the org.
-#      The script checks only the single issue from the event payload, making
-#      this path lightweight and near-real-time.
+#   1. schedule (hourly)
+#      Scans all Status = Triage items and checks each for membership in other
+#      projects.  Note: projects_v2_item is a webhook event only — it cannot
+#      be used as a native GitHub Actions workflow trigger.
 #
-#   2. schedule (hourly)
-#      A full scan catches any delegations that may have been missed — for
-#      example if the event-driven path is skipped due to a rate limit or
-#      a manual project assignment from outside the org.
+#   2. workflow_dispatch
+#      Manual run for testing or backfill.
 #
 # Required secret:
 #   TRIAGE_AUTOMATION_TOKEN  — PAT (classic) with scopes: read:org, project
@@ -26,11 +24,6 @@
 name: Triage Delegation
 
 on:
-  # Near-real-time: fires when any project item is created or edited in the org
-  projects_v2_item:
-    types: [created, edited]
-
-  # Hourly catch-all to handle anything the event-driven path missed
   schedule:
     - cron: '0 * * * *'
 

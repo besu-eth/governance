@@ -37,18 +37,18 @@ item is removed from the Triage project entirely instead.
 
 ## Triggers
 
-The workflow runs on two complementary triggers:
+The workflow runs on:
 
-1. **`projects_v2_item` (created / edited)** — near-real-time.  Fires for
-   every Projects v2 item change in the org.  The script only inspects the
-   single issue from the event payload so this path is lightweight.
+1. **Hourly schedule** — scans all `Status = Triage` items in the project and
+   checks each one for membership in other projects.
 
-2. **Hourly schedule** — catch-all.  Scans all `Status = Triage` items in the
-   project and checks each one for membership in other projects.  This handles
-   any delegations that the event-driven path might have missed.
+2. **`workflow_dispatch`** — manual scan for testing or backfill (supports a
+   `dry_run` input).
 
-A **`workflow_dispatch`** trigger is also provided so maintainers can run a
-manual scan at any time (e.g. to test the setup or backfill after changes).
+GitHub exposes a `projects_v2_item` webhook event when project items change,
+but that event **cannot** be used as a native GitHub Actions workflow trigger.
+Near-real-time updates would require an org webhook that forwards payloads via
+`repository_dispatch` (not currently configured).
 
 ---
 
