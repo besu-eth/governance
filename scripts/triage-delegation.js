@@ -284,7 +284,7 @@ async function getIssueOtherProjects(issueNodeId, triageProjectId, cachedProject
 
 async function updateItemStatus(projectId, itemId, fieldId, optionId) {
   await graphql(
-    `mutation($projectId: ID!, $itemId: ID!, $fieldId: ID!, $optionId: ID!) {`
+    `mutation($projectId: ID!, $itemId: ID!, $fieldId: ID!, $optionId: ID!) {
       updateProjectV2ItemFieldValue(input: {
         projectId: $projectId
         itemId: $itemId
