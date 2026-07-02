@@ -152,6 +152,15 @@ repositories:
       lf-staff: maintain
       # contributors intentionally excluded — governance changes are maintainer-only
 
+  # Org operations - issue automation, etc
+  - name: operations
+    teams:
+      repo-admins: admin
+      docs-maintainers: triage
+      besu-maintainers: maintain
+      besu-triage: triage
+    visibility: private
+
   # Org-wide GitHub defaults (.github/FUNDING.yml, issue templates, etc.)
   - name: .github
     teams:
