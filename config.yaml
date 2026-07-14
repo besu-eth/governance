@@ -66,6 +66,7 @@ teams:
       - fab-10
       - siladu
       - garyschulte
+      - usmansaleem
 
   - name: docs-maintainers
     maintainers:
