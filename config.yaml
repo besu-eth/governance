@@ -63,20 +63,9 @@ teams:
       - macfarla
       - kkaur01
     members:
-      - ahamlat
-      - daniellehrner
-      - diega
       - fab-10
-      - Gabriel-Trintinalia
-      - garyschulte
-      - gfukushima
-      - joshuafernandes
-      - lu-pinto
-      - lucassaldanha
-      - matkt
-      - pinges
       - siladu
-      - usmansaleem
+      - garyschulte
 
   - name: docs-maintainers
     maintainers:
