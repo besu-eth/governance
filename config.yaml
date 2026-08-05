@@ -73,11 +73,14 @@ teams:
   
   - name: performance
     maintainers:
-      - siladu
-      - ahamlat
+      - jframe
+      - jflo
+      - macfarla
+      - kkaur01
     members:
       - lu-pinto
-
+      - siladu
+      - ahamlat
 
   - name: docs-maintainers
     maintainers:
