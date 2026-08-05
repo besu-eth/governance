@@ -70,6 +70,14 @@ teams:
       - pinges
       - usmansaleem
       - Gabriel-Trintinalia
+  
+  - name: performance
+    maintainers:
+      - siladu
+      - ahamlat
+    members:
+      - lu-pinto
+
 
   - name: docs-maintainers
     maintainers:
