@@ -66,8 +66,10 @@ teams:
       - fab-10
       - siladu
       - garyschulte
+      - matkt
       - pinges
       - usmansaleem
+      - Gabriel-Trintinalia
   
   - name: performance
     maintainers:
@@ -75,6 +77,8 @@ teams:
       - ahamlat
     members:
       - lu-pinto
+
+
   - name: docs-maintainers
     maintainers:
       - jframe
