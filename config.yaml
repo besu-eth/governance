@@ -68,7 +68,13 @@ teams:
       - garyschulte
       - pinges
       - usmansaleem
-
+  
+  - name: performance
+    maintainers:
+      - siladu
+      - ahamlat
+    members:
+      - lu-pinto
   - name: docs-maintainers
     maintainers:
       - jframe
