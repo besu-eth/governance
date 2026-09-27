@@ -115,6 +115,14 @@ teams:
       - NickSneo
       - gtebrean
       - kkaur01
+  - name: besu-contributors
+    maintainers:
+      - macfarla
+      - jflo
+      - jframe
+      - kkaur01
+    members:
+      - bomanaps
 repositories:
 
   # Core client — highest-value repo
@@ -124,6 +132,13 @@ repositories:
       docs-maintainers: triage
       besu-maintainers: maintain
       besu-triage: triage
+    visibility: public
+  # besu-benchmarks
+  - name: besu-benchmarks
+    teams:
+      repo-admins: admin
+      besu-maintainers: maintain
+      besu-contributors: maintain
     visibility: public
   # Security vulnerability fixing — restricted
   - name: sec-besu
