@@ -33,6 +33,7 @@ teams:
       - jflo
       - macfarla
       - kkaur01
+      - fab-10
 
   - name: repo-admins
     maintainers:
