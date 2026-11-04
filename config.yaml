@@ -73,7 +73,16 @@ teams:
       - daniellehrner
       - lu-pinto
       - ahamlat
-
+      
+  - name: release-managers
+    maintainers:
+      - jframe
+      - jflo
+      - macfarla
+      - kkaur01
+    members:
+      - fab-10
+      
   - name: docs-maintainers
     maintainers:
       - jframe
@@ -128,6 +137,7 @@ repositories:
     teams:
       org-admins: admin
       security: write
+      release-managers: maintain
       # maintainers and contributors intentionally excluded
   - name: besu-docs
     teams:
