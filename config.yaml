@@ -92,6 +92,8 @@ teams:
     members:
       - alexandratran
       - bgravenorst
+      - joshuafernandes
+
   - name: besu-maintainers
     maintainers:
       - fab-10
@@ -114,6 +116,7 @@ teams:
       - siladu
       - usmansaleem
       - mirgee
+
   - name: besu-triage
     maintainers:
       - macfarla
@@ -121,6 +124,7 @@ teams:
       - jframe
     members:
       - kkaur01
+
 repositories:
 
   # Core client — highest-value repo
