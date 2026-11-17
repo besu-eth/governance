@@ -135,6 +135,7 @@ repositories:
       docs-maintainers: triage
       besu-maintainers: maintain
       besu-triage: triage
+      security: read
     visibility: public
   # Security vulnerability fixing — restricted
   - name: sec-besu
@@ -150,17 +151,20 @@ repositories:
       docs-maintainers: admin
       besu-maintainers: maintain
       besu-triage: read
+      security: read
     visibility: public
   - name: besu-native
     teams:
       repo-admins: admin
       maintainers: maintain
+      security: read
 
   # Static analysis / build tooling
   - name: besu-errorprone-checks
     teams:
       repo-admins: admin
       maintainers: maintain
+      security: read
 
   # Org governance (CLOWarden config lives here)
   - name: governance
@@ -168,6 +172,7 @@ repositories:
       repo-admins: admin
       maintainers: maintain
       lf-staff: maintain
+      security: read
       # contributors intentionally excluded — governance changes are maintainer-only
 
   # Org operations - issue automation, etc
@@ -177,6 +182,7 @@ repositories:
       docs-maintainers: triage
       besu-maintainers: maintain
       besu-triage: triage
+      security: read
     visibility: private
 
   # Org-wide GitHub defaults (.github/FUNDING.yml, issue templates, etc.)
@@ -185,6 +191,7 @@ repositories:
       org-admins: admin
       maintainers: maintain
       lf-staff: maintain
+      security: read
 
   # Wiki / knowledge base
   - name: wiki
@@ -193,12 +200,14 @@ repositories:
       maintainers: maintain
       lf-staff: maintain
       docs-maintainers: write
+      security: read
 
   # Homebrew tap for Besu
   - name: homebrew-besu
     teams:
       repo-admins: admin
       maintainers: maintain
+      security: read
 
   # Security vulnerability tracking — restricted
   - name: vectors
